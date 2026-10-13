@@ -11,6 +11,8 @@ Each student will publish their own repository, README, and app.
 
 We use **`index_1.csv`** from [Coffee Sales by ihelon on Kaggle](https://www.kaggle.com/datasets/ihelon/coffee-sales). The author describes real coffee vending-machine sales. **One row is one recorded transaction.**
 
+We use only index_1.csv because its year-long transaction history is sufficient to examine demand trends and drink mix. We keep the dashboard focused on this single data source; index_2.csv is outside the selected scope and is not included in any calculations.
+
 | Property | Value |
 |---|---|
 | Actual file period | March 1, 2024–March 23, 2025 |
