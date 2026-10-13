@@ -1,6 +1,6 @@
-# Coffee Sales Dashboard — Team15
+# Coffee Sales Dashboard — team15
 
-**Status:** Exploratory analysis and dashboard design; app development and deployment are planned.
+**Status:** EDA and app source prepared; Streamlit Community Cloud deployment pending.
 
 **Team members:** Chen, Junxian; Yu, Boyan; Bai, Yuning; Qian, Hongyi.
 
@@ -49,12 +49,12 @@ The Pandas and Matplotlib notebook, [`coffee-sales-eda.ipynb`](coffee-sales-eda.
 
 ### Page order
 
-1. **Context:** Team title, audience and purpose, snapshot period, intended refresh, and a date-range filter. One machine means no useful store selector.
+1. **Context:** Team title, audience and purpose, snapshot period, intended refresh, and a sidebar date-range filter, initially set to the full snapshot. One machine means no useful store selector.
 2. **Top:** Three side-by-side headline metrics using `st.columns` and `st.metric`, with transactions first. Any period comparison must use comparable reporting coverage.
 3. **Middle:** A daily transaction trend shows when activity changes. A horizontal chart of transactions by drink, labeled with shares, shows the demand mix behind replenishment choices.
 4. **Bottom:** Brief data limitations. No raw transaction table: the planned decisions require aggregate demand, not individual records.
 
-We will sketch this order on paper before app development. It puts overall performance first, then explanations, so the manager can understand the main message quickly.
+This page order puts overall performance first, then explanations, so the manager can understand the main message quickly. The exercise also asks the team to sketch this order on paper before app development.
 
 **Two deliberate exclusions:** Payment-method charts do not directly support ingredient allocation. Anonymous card identifiers and customer-level charts are also excluded: they do not support the chosen decisions and cannot provide a complete customer count, especially for cash purchases.
 
@@ -72,4 +72,18 @@ Track weekly transaction count. As a **provisional business rule**, a decline of
 
 A **one-day delay** can postpone investigation. A **one-week delay** can allow a problem to persist and lead to replenishment based on outdated demand, increasing the risk of shortages or unnecessary stock.
 
-Planned dashboard caption: **“Data: Mar 1, 2024–Mar 23, 2025 · Kaggle snapshot · Intended production refresh: nightly.”** This project uses a static CSV; the production refresh describes the proposed business process.
+The dashboard displays the actual data period, **Kaggle snapshot**, and **Intended production refresh: nightly**. This project uses a static CSV; the production refresh describes the proposed business process.
+
+## 5. Project files and deployment
+
+| File | Purpose |
+|---|---|
+| `app.py` | Streamlit dashboard entrypoint |
+| `index_1.csv` | Original Kaggle data, beside the app |
+| `requirements.txt` | Streamlit, Pandas, and Matplotlib dependencies |
+| `coffee-sales-eda.ipynb` | Exploratory analysis, outputs, and design evidence |
+| `README.md` | Business justification and project instructions |
+
+Upload the files to the root of your own public GitHub repository. In Streamlit Community Cloud, select that repository, branch `main`, and entrypoint `app.py`. Select **Python 3.14** in Advanced settings, as required by the exercise, then deploy.
+
+After deployment, add the live app link here and verify that another person can open it. Submit the live app URL and your own GitHub repository URL on Canvas.
