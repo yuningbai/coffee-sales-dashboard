@@ -1,7 +1,8 @@
 # Coffee Sales Dashboard — team15
 
-**Status:** EDA and app source prepared; Streamlit Community Cloud deployment pending.
+**Status:** Deployed on Streamlit Community Cloud.
 
+**Live app:** https://coffee-sales-dashboard-fdtb7ksaxdhrqpptjj3zr2.streamlit.app/
 **Team members:** Chen, Junxian; Yu, Boyan; Bai, Yuning; Qian, Hongyi.
 
 Each student will publish their own repository, README, and app.
